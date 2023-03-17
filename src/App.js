@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { Name } from "./components/getName";
+import {Pictures} from "./components/getPictures"
+import Testbed from "./components/test"
+
+//note: this is how you import an export default function from a class
+import Gallery from "./components/profile"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    //my first react component
+    //let gallery = new Gallery();
+    let test = new Testbed("https://i.imgur.com/X7bZXRv.jpeg", 'Comic', "Sarah's Scribbles", 'Harry', 1995);
+
+    return (
+        <Gallery/>
+    );
 }
 
 export default App;
